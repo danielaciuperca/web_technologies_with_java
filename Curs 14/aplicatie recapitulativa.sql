@@ -1,4 +1,5 @@
-CREATE DATABASE course13;
+CREATE DATABASE course14;
+USE course14;
 
 CREATE TABLE `drivers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -6,7 +7,7 @@ CREATE TABLE `drivers` (
   `email` varchar(45) DEFAULT NULL,
   `city` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `trips` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -17,4 +18,3 @@ CREATE TABLE `trips` (
   KEY `driverFK` (`driverId`),
   CONSTRAINT `driverFK` FOREIGN KEY (`driverId`) REFERENCES `drivers` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
